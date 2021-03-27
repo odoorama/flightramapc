@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% block title %}
+Select
+{% endblock %}
+{% block content %}
+<h2>Select</h2>
+<div class="container">
+<table class="table table-hover table-dark">
+    <thead>
+    <tr>
+        <!-- Your Columns HERE -->
+        <th scope="col">Product</th>
+        <th scope="col">Outline</th>
+        <th scope="col">Price</th>
+        <th scope="col">Options</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!-- Your rows inside the table HERE: -->
+    {% for item in items %}
+    <tr>
+        <td>{{ item.name }}</td>
+        <td>{{ item.barcode }}</td>
+        <td>{{ item.price }}</td>
+        <td>
+            <button class="btn btn-sm btn-outline btn-info">Info</button>
+            <button class="btn btn-sm btn-outline btn-success">Cart</button>
+        </td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+</div>
+<div class="container">
+<table class="table table-hover table-dark">
+    <thead>
+    <tr>
+        <!-- Your Columns HERE -->
+        <th scope="col">Product</th>
+        <th scope="col">Outline</th>
+        <th scope="col">Price</th>
+        <th scope="col">Options</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!-- Your rows inside the table HERE: -->
+    {% for item in items %}
+    <tr>
+        <td>{{ item.name }}</td>
+        <td>{{ item.barcode }}</td>
+        <td>{{ item.price }}</td>
+        <td>
+            <button class="btn btn-sm btn-outline btn-info">Info</button>
+            <button class="btn btn-sm btn-outline btn-success">Edit</button>
+        </td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block title %}
+Search
+{% endblock %}
+{% block content %}
+<h2>
+    Plan
+</h2>
+<p>
+    Name: My New Plan Ref: xxyzph1g
+    <button type="button" class="btn btn-sm btn-success">Edit</button>
+</p>
+<table class="table table-hover table-dark">
+    <thead>
+    <tr>
+        <!-- Your Columns HERE -->
+        <th scope="col">Type</th>
+        <th scope="col">Options</th>
+        <th scope="col">Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!-- Your rows inside the table HERE: -->
+    {% for planitem in planitems %}
+    <tr>
+        <td>{{ planitem.type }}</td>
+        <td>
+            {% for option in planitem.options %}
+             <button type="button" class="btn btn-lg btn-{{option.status}}">{{ option.description }}</button>
+            {% endfor %}
+        </td>
+        <td>
+            {% for action in planitem.actions %}
+             <button type="button" class="btn btn-sm btn-{{action.status}}">{{ action.description }}</button>
+            {% endfor %}
+        </td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}
