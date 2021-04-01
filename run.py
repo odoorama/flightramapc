@@ -6,6 +6,6 @@ if ON_HEROKU:
     # get the heroku port
     port = int(os.environ.get('PORT', 17995))  # as per OP comments default is 17995
 else:
-    port = 5000
+    port = 17995
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=port)
