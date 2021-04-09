@@ -1,7 +1,7 @@
-from flask import render_template, redirect, url_for, flash, get_flashed_messages
+from flask import render_template, redirect, url_for, flash, get_flashed_messages, session
 from market import app
-from market.forms import RegisterForm
-from market.models import U2Message
+from market.forms import RegisterForm, LoginForm
+from market.models import U2Message, User
 
 app_styles = {}
 base_style = "body { background-color: purple; color: white }"
@@ -11,6 +11,15 @@ app_styles['base'] = base_style
 @app.route('/home')
 def home_page():
     return render_template('home.html', app_styles=app_styles)
+
+@app.route('/set/<value>')
+def set_session(value):
+    session['value'] = value
+    return f'The value you set is: { value }'
+
+@app.route('/get')
+def get_session():
+    return f'The value in the session is { session.get("value")}'
 
 
 @app.route('/search')
@@ -23,8 +32,8 @@ def search_page():
 @app.route('/select')
 def select_page():
     u2M = U2Message()
-    items = u2M.get_items()
-    return render_template('select.html', app_styles=app_styles, items=items)
+    product_list = u2M.get_product_list()
+    return render_template('select3.html', app_styles=app_styles, product_list=product_list)
 
 
 @app.route('/party')
@@ -72,13 +81,27 @@ def bookings_page():
     return render_template('bookings.html', app_styles=app_styles)
 
 
+@app.route('/login', methods=['GET', 'POST'])
+def login_page():
+    form = LoginForm()
+    if form.validate_on_submit():
+        return redirect(url_for('home_page'))
+
+    if form.errors != {}:
+        for err_msg in form.errors.values():
+            flash(f'There was an Error creating a User: {err_msg}', category="danger")
+    return render_template('login.html', app_styles=app_styles, form=form)
+
+
 @app.route('/register', methods=['GET', 'POST'])
 def register_page():
     form = RegisterForm()
     if form.validate_on_submit():
-       # create user u2
-       return redirect(url_for('home_page'))
-#    print(f'no. errors = {form.errors}')
+        user_to_create = User(username=form.username.data, email_address=form.email_address.data, password=form.password1.data)
+        user_to_create.newuser()
+        flash(f'User {user_to_create.username} created')
+        return redirect(url_for('home_page'))
+
     if form.errors != {}:
         for err_msg in form.errors.values():
             flash(f'There was an Error creating a User: {err_msg}', category="danger")

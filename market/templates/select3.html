@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% block title %}
+Select
+{% endblock %}
+{% block content %}
+<div class="container">
+<h3>Select</h3>
+<!-- <div class="card-group" bg-dark> -->
+    {% for product in product_list %}
+
+      <div class="card bg-dark row mx-auto mt-2 border-primary">
+          <div class="card-header bg-primary">Fight Only - LON - ACC</div>
+          <div class="card-body">
+          {% for stage in product.itinerary %}
+          <div class="row">
+          <div class="card-body">
+              <div>Principal</div>
+              <div>Principal Name</div>
+              <div>Principal Logo</div>
+          </div>
+          <div class="card-body">
+              <h3>LGW</h3>
+              <div>London Gatwick</div>
+              <div>21 Jun 2021</div>
+              <div>09:45am</div>
+          </div>
+          <div class="card-body">
+              <div>Direct</div>
+              <div>0 stops</div>
+              <div>12H 15m</div>
+          </div>
+          <div class="card-body">
+              <h3>ACC</h3>
+              <div>Accra Ghana</div>
+              <div>21 Jun 2021</div>
+              <div>17:45pm</div>
+          </div>
+          </div>
+          {% endfor %}</div>
+          <div class="card-footer bg-primary">Fight Only - LON - ACC</div>
+        </div>
+    {% endfor %}
+</div>
+
+<div class="container">
+<h3>Cart</h3>
+<table class="table table-hover table-dark">
+    <thead>
+    <tr>
+        <!-- Your Columns HERE -->
+        <th scope="col">Product</th>
+        <th scope="col">Outline</th>
+        <th scope="col">Price</th>
+        <th scope="col">Options</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!-- Your rows inside the table HERE: -->
+    {% for product in product_list %}
+    <tr>
+        <td>{{ product.name }}</td>
+        <td>{{ product.barcode }}</td>
+        <td>{{ product.price }}</td>
+        <td>
+            <button class="btn btn-sm btn-outline btn-info">Info</button>
+            <button class="btn btn-sm btn-outline btn-success">Edit</button>
+        </td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+</div>
+
+
+{% endblock %}
