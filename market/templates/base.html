@@ -69,12 +69,15 @@
     </div>
 </nav>
 <div>
-    <h4 class="text-center">
-        <div>
+    <h3 class="text-center">
             <a href="{{ url_for('home_page') }}" class="fa fa-home" role="button"></a>
             <a href="{{ url_for('search_page') }}" class="fa fa-map" role="button"></a>
             <a href="{{ url_for('party_page') }}" class="fa fa-users" role="button"></a>
             <a href="{{ url_for('select_page') }}" class="fa fa-search-plus" role="button"></a>
+            <a href="{{ url_for('login_page') }}" class="fa fa-info" role="button"></a>
+            <a href="{{ url_for('register_page') }}" class="fa fa-info" role="button"></a>
+    </h3>
+    <h3 class="text-center">
             <a href="{{ url_for('places_page') }}" class="fa fa-globe" role="button"></a>
             <a href="{{ url_for('routes_page') }}" class="fa fa-map-signs" role="button"></a>
             <a href="{{ url_for('offers_page') }}" class="fa fa-info" role="button"></a>
@@ -83,8 +86,7 @@
             <a href="{{ url_for('sponsors_page') }}" class="fa fa-angellist" role="button"></a>
             <a href="{{ url_for('cart_page') }}" class="fa fa-shopping-cart" role="button"></a>
             <a href="{{ url_for('bookings_page') }}" class="fa fa-ticket" role="button"></a>
-        </div>
-    </h4>
+    </h3>
 </div>
 {% with messages = get_flashed_messages(with_categories=True) %}
   {% if messages %}
