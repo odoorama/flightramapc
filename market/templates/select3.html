@@ -10,7 +10,6 @@ Select
 
       <div class="card bg-dark row mx-auto mt-2 border-primary">
           <div class="card-header bg-primary">{{ product.name }}</div>
-<!--          <div class="card-body"> -->
           {% for stage in product.itinerary %}
           <div class="row">
           <div class="card-body">
@@ -20,9 +19,11 @@ Select
               <div>09:45am</div>
           </div>
           <div class="card-body" style="font-size:10pt">
-              <div>Direct</div>
-              <div>0 stops</div>
+              <div>In-Direct</div>
+              <div>1 stop</div>
               <div>12H 15m</div>
+              <div>LGW - FRK Frankfurt</div>
+              <div>FRK - ACC Accra</div>
           </div>
           <div class="card-body">
               <h3>ACC</h3>
@@ -32,7 +33,6 @@ Select
           </div>
           </div>
           {% endfor %}
-<!--          </div> -->
           <div class="card-footer bg-primary">{{ product.name }}</div>
         </div>
     {% endfor %}
