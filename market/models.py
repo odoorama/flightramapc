@@ -61,9 +61,9 @@ class U2Message:
         itineraryA = []
 
         self.product_list = [
-            {'id': 1, 'type': 'Flight', 'name': 'Flight London - Accra', 'barcode': '893212299897', 'price': 500,
+            {'id': 1, 'type': 'Flight', 'name': 'Flight London - Accra (return)', 'barcode': '893212299897', 'price': 500,
              'itinerary': itineraryF},
-            {'id': 2, 'type': 'Flight', 'name': 'Flight Only Accra - London', 'barcode': '123985473165', 'price': 1000,
+            {'id': 2, 'type': 'Flight', 'name': 'Flight Accra - London (one-way)', 'barcode': '123985473165', 'price': 1000,
              'itinerary': itineraryF},
             {'id': 3, 'type': 'Tour', 'name': 'Best of Accra Ten Days', 'barcode': '231985128446', 'price': 150,
              'itinerary': itineraryA},
