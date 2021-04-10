@@ -69,7 +69,7 @@
     </div>
 </nav>
 <div>
-    <h3 class="text-center">
+    <h4 class="text-center">
         <div>
             <a href="{{ url_for('home_page') }}" class="fa fa-home" role="button"></a>
             <a href="{{ url_for('search_page') }}" class="fa fa-map" role="button"></a>
@@ -84,7 +84,7 @@
             <a href="{{ url_for('cart_page') }}" class="fa fa-shopping-cart" role="button"></a>
             <a href="{{ url_for('bookings_page') }}" class="fa fa-ticket" role="button"></a>
         </div>
-    </h3>
+    </h4>
 </div>
 {% with messages = get_flashed_messages(with_categories=True) %}
   {% if messages %}
