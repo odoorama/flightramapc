@@ -69,24 +69,24 @@
     </div>
 </nav>
 <div>
-    <h3 class="text-center">
-            <a href="{{ url_for('home_page') }}" class="fa fa-home" role="button"></a>
-            <a href="{{ url_for('search_page') }}" class="fa fa-map" role="button"></a>
-            <a href="{{ url_for('party_page') }}" class="fa fa-users" role="button"></a>
-            <a href="{{ url_for('select_page') }}" class="fa fa-search-plus" role="button"></a>
-            <a href="{{ url_for('login_page') }}" class="fa fa-info" role="button"></a>
-            <a href="{{ url_for('register_page') }}" class="fa fa-info" role="button"></a>
-    </h3>
-    <h3 class="text-center">
-            <a href="{{ url_for('places_page') }}" class="fa fa-globe" role="button"></a>
-            <a href="{{ url_for('routes_page') }}" class="fa fa-map-signs" role="button"></a>
-            <a href="{{ url_for('offers_page') }}" class="fa fa-info" role="button"></a>
-            <a href="{{ url_for('top_lists_page') }}" class="fa fa-sort-amount-asc" role="button"></a>
-            <a href="{{ url_for('subscriptions_page') }}" class="fa fa-tasks" role="button"></a>
-            <a href="{{ url_for('sponsors_page') }}" class="fa fa-angellist" role="button"></a>
-            <a href="{{ url_for('cart_page') }}" class="fa fa-shopping-cart" role="button"></a>
-            <a href="{{ url_for('bookings_page') }}" class="fa fa-ticket" role="button"></a>
-    </h3>
+    <h1 class="text-center">
+            <a href="{{ url_for('home_page') }}" class="fa fa-home" role="button" style="color:white"></a>
+            <a href="{{ url_for('search_page') }}" class="fa fa-map" role="button" style="color:white"></a>
+            <a href="{{ url_for('party_page') }}" class="fa fa-users" role="button" style="color:white"></a>
+            <a href="{{ url_for('select_page') }}" class="fa fa-search-plus" role="button" style="color:white"></a>
+            <a href="{{ url_for('cart_page') }}" class="fa fa-shopping-cart" role="button" style="color:white"></a>
+            <a href="{{ url_for('login_page') }}" class="fa fa-info" role="button" style="color:white"></a>
+            <a href="{{ url_for('register_page') }}" class="fa fa-info" role="button" style="color:white"></a>
+    </h1>
+    <h1 class="text-center">
+            <a href="{{ url_for('places_page') }}" class="fa fa-globe" role="button" style="color:white"></a>
+            <a href="{{ url_for('routes_page') }}" class="fa fa-map-signs" role="button" style="color:white"></a>
+            <a href="{{ url_for('offers_page') }}" class="fa fa-info" role="button" style="color:white"></a>
+            <a href="{{ url_for('top_lists_page') }}" class="fa fa-sort-amount-asc" role="button" style="color:white"></a>
+            <a href="{{ url_for('subscriptions_page') }}" class="fa fa-tasks" role="button" style="color:white"></a>
+            <a href="{{ url_for('sponsors_page') }}" class="fa fa-angellist" role="button" style="color:white"></a>
+            <a href="{{ url_for('bookings_page') }}" class="fa fa-ticket" role="button" style="color:white"></a>
+    </h1>
 </div>
 {% with messages = get_flashed_messages(with_categories=True) %}
   {% if messages %}
