@@ -1,13 +1,13 @@
 {% extends 'base.html' %}
 {% block title %}
-FlightRama | Home
+{{ app_context.brand_name }} | Home
 {% endblock %}
 {% block content %}
 <div class="container">
     <h4>Home</h4>
     <div class="jumbletron text-center">
-        <h4>Welcome to FlightRama</h4>
-        <h4><i class="fa fa-globe"></i> The Home of Going Away</h4>
+        <h4>Welcome to {{ app_context.channel_name }}</h4>
+        <h4><i class="{{ app_context.channel_icon }}"></i> {{ app_context.channel_catchphrase }}</h4>
         <p></p>
         <a class="btn btn-success" href="#">New Plan/Search</a>
     </div>

@@ -1,19 +1,18 @@
 {% extends 'base.html' %}
 {% block title %}
-Register
+{{ app_context.channel_name }} | Register
 {% endblock %}
 {% block content %}
 <body>
 <div class="container">
-    <h3>Register</h3>
+    <h4>Register</h4>
 </div>
 <div class = "container text-center">
-    <h1>FlightRama</h1>
     <form method="POST" class="form-register" style="color:white">
         {{form.hidden_tag()}}
-        <h1 class="h3 mb-3 font-weight-normal">
-            Please Create Your Account
-        </h1>
+        <h4 class="h4 mb-3 font-weight-normal">
+            Please Register:
+        </h4>
         {{ form.username.label() }}
         {{ form.username(class='form-control', placeholder='Username') }}
 

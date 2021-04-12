@@ -1,10 +1,10 @@
 {% extends 'base.html' %}
 {% block title %}
-Select
+FlightRama | Select
 {% endblock %}
 {% block content %}
 <div class="container">
-<h3>Select</h3>
+<h4>Select</h4>
 <!-- <div class="card-group" bg-dark> -->
     {% for product in product_list %}
 
@@ -13,7 +13,7 @@ Select
           {% for stage in product.itinerary %}
           <div class="row">
           <div class="card-body">
-              <h3>LGW</h3>
+              <h4>LGW</h4>
               <div>London Gatwick</div>
               <div>21 Jun 2021</div>
               <div>09:45am</div>
@@ -26,7 +26,7 @@ Select
               <div>FRK - ACC Accra</div>
           </div>
           <div class="card-body">
-              <h3>ACC</h3>
+              <h4>ACC</h4>
               <div>Accra Ghana</div>
               <div>21 Jun 2021</div>
               <div>17:45pm</div>
@@ -39,7 +39,7 @@ Select
 </div>
 
 <div class="container">
-<h3>Cart</h3>
+<h4>Cart</h4>
 <table class="table table-hover table-dark">
     <thead>
     <tr>
