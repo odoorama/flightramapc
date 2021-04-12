@@ -10,13 +10,13 @@ def set_app_context():
     app_context['platform_code'] = '00001'
     app_context['platform_name'] = 'UniRama'
     channel_in = 'flightrama'
-    if url_root.find('ghanarama'):
+    if url_root.find('ghanarama') >= 0:
         channel_in = 'ghanarama'
-    if url_root.find('flightrama'):
+    if url_root.find('flightrama') >= 0:
         channel_in = 'flightrama'
-    if url_root.find('unirama'):
+    if url_root.find('unirama') >= 0:
         channel_in = 'unirama'
-    if url_root.find('pakistanja'):
+    if url_root.find('pakistanja') >= 0:
         channel_in = 'pakistanja'
 
 
@@ -45,10 +45,10 @@ def set_app_context():
 
     return app_context
 
-def set_app_styles(app_context):
+def set_app_styles(in_context):
 
     app_styles = {}
-    app_styles['base'] = app_context['base_style']
+    app_styles['base'] = in_context['base_style']
     return app_styles
 
 
