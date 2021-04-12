@@ -7,25 +7,40 @@ def set_app_context():
     url_root = request.url_root
 #    url_root = 'hello'
     app_context = {}
-    app_context['platform_code'] = '00001'
+    app_context['platform_code'] = '0001'
     app_context['platform_name'] = 'UniRama'
     channel_in = 'flightrama'
-    if url_root.find('ghanarama') >= 0:
-        channel_in = 'ghanarama'
-    if url_root.find('flightrama') >= 0:
-        channel_in = 'flightrama'
     if url_root.find('unirama') >= 0:
         channel_in = 'unirama'
+    if url_root.find('flightrama') >= 0:
+        channel_in = 'flightrama'
+    if url_root.find('ghanarama') >= 0:
+        channel_in = 'ghanarama'
+    if url_root.find('studentrama') >= 0:
+        channel_in = 'studentrama'
+    if url_root.find('safarirama') >= 0:
+        channel_in = 'safarirama'
     if url_root.find('pakistanja') >= 0:
         channel_in = 'pakistanja'
 
+    if channel_in == 'unirama':
+        app_context['enterprise_code'] = '0001-0001'
+        app_context['enterprise_name'] = 'Unirama'
+        app_context['brand_code'] = '0001-0001-0001'
+        app_context['brand_name'] = 'UniRama'
+        app_context['channel_code'] = '0001-0001-0001-0001'
+        app_context['channel_name'] = 'UniRama'
+        app_context['channel_catchphrase'] = 'Unity and Dignity'
+        app_context['channel_catchphrase'] = url_root
+        app_context['channel_icon'] = 'fa fa-globe'
+        app_context['base_style'] = "body { background-color: green; color: white }"
 
     if channel_in == 'flightrama':
-        app_context['enterprise_code'] = '00001-00001'
+        app_context['enterprise_code'] = '0001-0002'
         app_context['enterprise_name'] = 'FlightRama'
-        app_context['brand_code'] = '00001-00001-00001'
+        app_context['brand_code'] = '0001-0002-0001'
         app_context['brand_name'] = 'FlightRama'
-        app_context['channel_code'] = '00001-00001-00001-00001'
+        app_context['channel_code'] = '0001-0002-0001-0001'
         app_context['channel_name'] = 'FlightRama'
         app_context['channel_catchphrase'] = 'The Home of Going Away'
         app_context['channel_catchphrase'] = url_root
@@ -33,16 +48,53 @@ def set_app_context():
         app_context['base_style'] = "body { background-color: purple; color: white }"
 
     if channel_in == 'ghanarama':
-        app_context['enterprise_code'] = '00001-00001'
+        app_context['enterprise_code'] = '0001-0003'
         app_context['enterprise_name'] = 'GhanaRama'
-        app_context['brand_code'] = '00001-00001-00001'
+        app_context['brand_code'] = '0001-0003-0001'
         app_context['brand_name'] = 'GhanaRama'
-        app_context['channel_code'] = '00001-00001-00001-00001'
+        app_context['channel_code'] = '0001-0003-0001-0001'
         app_context['channel_name'] = 'GhanaRama'
         app_context['channel_catchphrase'] = 'The Beautiful Black Star of Africa'
         app_context['channel_icon'] = 'fa fa-star'
         app_context['base_style'] = "body { background-color: orange; color: black }"
 
+    if channel_in == 'studentrama':
+        app_context['enterprise_code'] = '0001-0004'
+        app_context['enterprise_name'] = 'StudentRama'
+        app_context['brand_code'] = '0001-0004-0001'
+        app_context['brand_name'] = 'StudentRama'
+        app_context['channel_code'] = '0001-0004-0001-0001'
+        app_context['channel_name'] = 'StudentRama'
+        app_context['channel_catchphrase'] = 'Broadening Minds'
+        app_context['channel_catchphrase'] = url_root
+        app_context['channel_icon'] = 'fa fa-globe'
+        app_context['base_style'] = "body { background-color: blue; color: white }"
+
+    if channel_in == 'safarirama':
+        app_context['enterprise_code'] = '0001-0005'
+        app_context['enterprise_name'] = 'SafariRama'
+        app_context['brand_code'] = '0001-0005-0001'
+        app_context['brand_name'] = 'SafariRama'
+        app_context['channel_code'] = '0001-0005-0001-0001'
+        app_context['channel_name'] = 'SafariRama'
+        app_context['channel_catchphrase'] = 'The Love of Life'
+        app_context['channel_catchphrase'] = url_root
+        app_context['channel_icon'] = 'fa fa-globe'
+        app_context['base_style'] = "body { background-color: purple; color: white }"
+        
+    if channel_in == 'pakistanja':
+        app_context['enterprise_code'] = '0001-1001'
+        app_context['enterprise_name'] = 'Pakistanja'
+        app_context['brand_code'] = '0001-1001-0001'
+        app_context['brand_name'] = 'Pakistanja'
+        app_context['channel_code'] = '0001-1001-0001-0001'
+        app_context['channel_name'] = 'Pakistanja'
+        app_context['channel_catchphrase'] = 'Dreaming of Pakistan Skies'
+        app_context['channel_catchphrase'] = url_root
+        app_context['channel_icon'] = 'fa fa-globe'
+        app_context['base_style'] = "body { background-color: green; color: white }"
+    
+    
     return app_context
 
 def set_app_styles(in_context):
