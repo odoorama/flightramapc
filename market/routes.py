@@ -10,6 +10,15 @@ def set_app_context():
     app_context['platform_code'] = '00001'
     app_context['platform_name'] = 'UniRama'
     channel_in = 'flightrama'
+    if url_root.find('ghanarama'):
+        channel_in = 'ghanarama'
+    if url_root.find('flightrama'):
+        channel_in = 'flightrama'
+    if url_root.find('unirama'):
+        channel_in = 'unirama'
+    if url_root.find('pakistanja'):
+        channel_in = 'pakistanja'
+
 
     if channel_in == 'flightrama':
         app_context['enterprise_code'] = '00001-00001'
