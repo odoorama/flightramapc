@@ -20,6 +20,10 @@ def set_app_context():
         channel_in = 'studentrama'
     if url_root.find('safarirama') >= 0:
         channel_in = 'safarirama'
+    if url_root.find('cruiserama') >= 0:
+        channel_in = 'cruiserama'
+    if url_root.find('ferryrama') >= 0:
+        channel_in = 'ferryrama'
     if url_root.find('pakistanja') >= 0:
         channel_in = 'pakistanja'
 
@@ -80,8 +84,33 @@ def set_app_context():
         app_context['channel_catchphrase'] = 'The Love of Life'
         app_context['channel_catchphrase'] = url_root
         app_context['channel_icon'] = 'fa fa-globe'
-        app_context['base_style'] = "body { background-color: purple; color: white }"
-        
+        app_context['base_style'] = "body { background-color: orange; color: white }"
+
+    if channel_in == 'ferryrama':
+        app_context['enterprise_code'] = '0001-0006'
+        app_context['enterprise_name'] = 'FerryRama'
+        app_context['brand_code'] = '0001-0006-0001'
+        app_context['brand_name'] = 'FerryRama'
+        app_context['channel_code'] = '0001-0006-0001-0001'
+        app_context['channel_name'] = 'FerryRama'
+        app_context['channel_catchphrase'] = 'A Better Way to Travel'
+        app_context['channel_catchphrase'] = url_root
+        app_context['channel_icon'] = 'fa fa-globe'
+        app_context['base_style'] = "body { background-color: blue; color: white }"
+
+
+    if channel_in == 'cruiserama':
+        app_context['enterprise_code'] = '0001-0007'
+        app_context['enterprise_name'] = 'CruiseRama'
+        app_context['brand_code'] = '0001-0007-0001'
+        app_context['brand_name'] = 'CruiseRama'
+        app_context['channel_code'] = '0001-0007-0001-0001'
+        app_context['channel_name'] = 'CruiseRama'
+        app_context['channel_catchphrase'] = 'The World in your Oyster'
+        app_context['channel_catchphrase'] = url_root
+        app_context['channel_icon'] = 'fa fa-globe'
+        app_context['base_style'] = "body { background-color: blue; color: white }"
+
     if channel_in == 'pakistanja':
         app_context['enterprise_code'] = '0001-1001'
         app_context['enterprise_name'] = 'Pakistanja'
