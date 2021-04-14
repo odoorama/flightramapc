@@ -8,12 +8,12 @@
 <!-- <div class="card-group" bg-dark> -->
     {% for product in product_list %}
 
-      <div class="card bg-dark row mx-auto mt-2 border-primary">
+      <div class="card bg-dark text-white row mx-auto mt-2 border-primary">
           <div class="card-header bg-primary">{{ product.name }}</div>
           {% for stage in product.itinerary %}
           <div class="row">
           <div class="card-body">
-              <h4>LGW</h4>
+              <h4>From: LGW</h4>
               <div>London Gatwick</div>
               <div>21 Jun 2021</div>
               <div>09:45am</div>
@@ -26,7 +26,7 @@
               <div>FRK - ACC Accra</div>
           </div>
           <div class="card-body">
-              <h4>ACC</h4>
+              <h4>To: ACC</h4>
               <div>Accra Ghana</div>
               <div>21 Jun 2021</div>
               <div>17:45pm</div>

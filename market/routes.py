@@ -9,7 +9,7 @@ def set_app_context():
     app_context = {}
     app_context['platform_code'] = '0001'
     app_context['platform_name'] = 'UniRama'
-    channel_in = 'flightrama'
+    channel_in = 'ghanarama'
     if url_root.find('unirama') >= 0:
         channel_in = 'unirama'
     if url_root.find('flightrama') >= 0:
@@ -150,13 +150,13 @@ def get_session():
     return f'The value in the session is { session.get("value")}'
 
 
-@app.route('/search')
-def search_page():
+@app.route('/plan')
+def plan_page():
     app_context = set_app_context()
     app_styles = set_app_styles(app_context)
     u2M = U2Message()
     planitems = u2M.get_planitems()
-    return render_template('search.html', app_context=app_context, app_styles=app_styles, planitems=planitems)
+    return render_template('plan.html', app_context=app_context, app_styles=app_styles, planitems=planitems)
 
 
 @app.route('/select')
