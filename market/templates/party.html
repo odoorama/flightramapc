@@ -5,5 +5,38 @@
 {% block content %}
 <div class="container">
     <h4>Party</h4>
+<table class="table table-hover table-dark">
+    <thead>
+    <tr>
+        <!-- Your Columns HERE -->
+        <th scope="col">Type</th>
+        <th scope="col">Title</th>
+        <th scope="col">FirstName</th>
+        <th scope="col">LastName</th>
+        <th scope="col">Age</th>
+        <th scope="col">Rm</th>
+        <th scope="col">Options</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!-- Your rows inside the table HERE: -->
+    {% for pax in pax_list %}
+    <tr>
+        <td>{{ pax.type }}</td>
+        <td>{{ pax.title }}</td>
+        <td>{{ pax.firstname }}</td>
+        <td>{{ pax.lastname }}</td>
+        <td>{{ pax.age }}</td>
+        <td>{{ pax.room }}</td>
+        <td>
+            <button class="btn btn-sm btn-outline btn-info">Info</button>
+            <button class="btn btn-sm btn-outline btn-success">Edit</button>
+        </td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
 </div>
+
+
 {% endblock %}

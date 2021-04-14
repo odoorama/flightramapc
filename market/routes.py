@@ -172,7 +172,9 @@ def select_page():
 def party_page():
     app_context = set_app_context()
     app_styles = set_app_styles(app_context)
-    return render_template('party.html', app_context=app_context, app_styles=app_styles)
+    u2M = U2Message()
+    pax_list = u2M.get_pax_list()
+    return render_template('party.html', app_context=app_context, app_styles=app_styles, pax_list=pax_list)
 
 
 @app.route('/cart')

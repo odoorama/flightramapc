@@ -113,11 +113,101 @@ class U2Message:
              }
         ]
 
+        self.pax_list = [
+            {'code': '1',
+             'type': 'Adult',
+             'title': 'Mr',
+             'firstname': 'Stephen',
+             'lastname': 'Watson',
+             'age': '21',
+             'room': '1',
+             'options': [{'description': 'From?', 'status': 'primary'},
+                     {'description': 'To?', 'status': 'success'},
+                     {'description': 'Date?', 'status': 'success'}
+                     ],
+             'actions': [{'description': 'add', 'status': 'primary'},
+                     {'description': 'del', 'status': 'danger'}]
+             },
+            {'code': '1',
+             'type': 'Adult',
+             'title': 'Mr',
+             'firstname': 'Stephen',
+             'lastname': 'Watson',
+             'age': '21',
+             'room': '1',
+             'options': [{'description': 'From?', 'status': 'primary'},
+                     {'description': 'To?', 'status': 'success'},
+                     {'description': 'Date?', 'status': 'success'}
+                     ],
+             'actions': [{'description': 'add', 'status': 'primary'},
+                     {'description': 'del', 'status': 'danger'}]
+             },
+            {'code': '1',
+             'type': 'Adult',
+             'title': 'Mr',
+             'firstname': 'Stephen',
+             'lastname': 'Watson',
+             'age': '21',
+             'room': '2',
+             'options': [{'description': 'From?', 'status': 'primary'},
+                     {'description': 'To?', 'status': 'success'},
+                     {'description': 'Date?', 'status': 'success'}
+                     ],
+             'actions': [{'description': 'add', 'status': 'primary'},
+                     {'description': 'del', 'status': 'danger'}]
+             },
+            {'code': '1',
+             'type': 'Adult',
+             'title': 'Mr',
+             'firstname': 'Stephen',
+             'lastname': 'Watson',
+             'age': '21',
+             'room': '2',
+             'options': [{'description': 'From?', 'status': 'primary'},
+                     {'description': 'To?', 'status': 'success'},
+                     {'description': 'Date?', 'status': 'success'}
+                     ],
+             'actions': [{'description': 'add', 'status': 'primary'},
+                     {'description': 'del', 'status': 'danger'}]
+             },
+            {'code': '1',
+             'type': 'Adult',
+             'title': 'Mr',
+             'firstname': 'Stephen',
+             'lastname': 'Watson',
+             'age': '21',
+             'room': '3',
+             'options': [{'description': 'From?', 'status': 'primary'},
+                     {'description': 'To?', 'status': 'success'},
+                     {'description': 'Date?', 'status': 'success'}
+                     ],
+             'actions': [{'description': 'add', 'status': 'primary'},
+                     {'description': 'del', 'status': 'danger'}]
+             },
+            {'code': '1',
+             'type': 'Adult',
+             'title': 'Mr',
+             'firstname': 'Stephen',
+             'lastname': 'Watson',
+             'age': '21',
+             'room': '3',
+             'options': [{'description': 'From?', 'status': 'primary'},
+                     {'description': 'To?', 'status': 'success'},
+                     {'description': 'Date?', 'status': 'success'}
+                     ],
+             'actions': [{'description': 'add', 'status': 'primary'},
+                     {'description': 'del', 'status': 'danger'}]
+             }
+        ]
+
     def get_product_list(self):
         return self.product_list
 
     def get_planitems(self):
         return self.planitems
+
+    def get_pax_list(self):
+        return self.pax_list
 
 
 class UopyMessage:
